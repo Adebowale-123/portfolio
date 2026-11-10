@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Rate Comparison Platform · Your Name</title>
+    <meta name="description" content="PAS FX Compare helps people sending money abroad see how much the recipient will actually get, by combining the live market rate with each transfer method's fees and margin.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css?v=1">
+</head>
+<body>
+
+<nav class="nav">
+    <div class="container nav-inner">
+        <a href="../index.html" class="logo"><span class="logo-mark">YN</span> Your Name</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#projects" class="active">Projects</a></li>
+            <li><a href="../index.html#skills">Skills &amp; Technologies</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="../index.html#contact" class="btn btn-primary btn-sm">Hire me</a>
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </div>
+</nav>
+
+<header class="case-hero">
+    <div class="container">
+        <a href="../index.html#projects" class="back"><i class="fas fa-arrow-left"></i> All projects</a>
+        <div class="project-num">04</div>
+        <h1>Currency Rate Comparison Platform</h1>
+        <div class="badges"><span class="badge live">Live</span><span class="badge">APIs</span><span class="badge note">Provider quotes are estimates for now</span></div>
+        <p class="lead">PAS FX Compare helps people sending money abroad see how much the recipient will actually get, by combining the live market rate with each transfer method's fees and margin.</p>
+        <div class="case-meta"><div><b>Product</b><span>PAS FX Compare</span></div><div><b>Role</b><span>Full-stack developer</span></div><div><b>Stack</b><span>REST API + SPA</span></div><div><b>Status</b><span>Live on Render</span></div></div>
+    </div>
+</header>
+
+<div class="container case-body">
+    <article>
+            <h2>The problem</h2>
+            <p>The headline exchange rate rarely tells you what arrives. Fees and hidden margins vary widely between banks, money-transfer apps and cash-pickup services, especially on routes like GBP → NGN. People need one number: <i>how much will my recipient get?</i></p>
+
+            <figure>
+                <div class="frame">
+                    <div class="frame-bar"><i></i><i></i><i></i><span class="url">pas-fx-compare.onrender.com</span></div>
+                    <picture><source srcset="../images/pasfx-home.webp" type="image/webp"><img src="../images/pasfx-home.jpg" alt="Converter: GBP 1,000 to NGN, with the best option shown first" width="1200" height="750" loading="lazy"></picture>
+                </div>
+                <figcaption>Converter: GBP 1,000 to NGN, with the best option shown first</figcaption>
+            </figure>
+
+            <h2>How it works</h2>
+            <ul>
+                <li><b>Currencies API</b>: <span class="mono">GET /api/currencies</span> serves 160+ currencies with names and symbols for the pickers.</li>
+                <li><b>Live market rate</b>: the server fetches the mid-market rate for the chosen pair and records when it was updated.</li>
+                <li><b>Comparison logic</b>: <span class="mono">GET /api/compare?from=GBP&amp;to=NGN&amp;amount=1000</span> applies each transfer method's fee and margin, works out the effective rate and the amount received, and returns the quotes ranked best first, with transfer time.</li>
+                <li><b>Two directions</b>: you can enter what you send or what they receive; the swap button reverses the pair.</li>
+                <li><b>Auto-refresh</b>: the front end refreshes the rate on a countdown so the number on screen stays current.</li>
+            </ul>
+
+            <figure>
+                <div class="frame">
+                    <div class="frame-bar"><i></i><i></i><i></i><span class="url">pas-fx-compare.onrender.com/#/providers</span></div>
+                    <picture><source srcset="../images/pasfx-providers.webp" type="image/webp"><img src="../images/pasfx-providers.jpg" alt="Providers whose rates are being integrated" width="1200" height="750" loading="lazy"></picture>
+                </div>
+                <figcaption>Providers whose rates are being integrated</figcaption>
+            </figure>
+
+            <h2>Vendor integrations</h2>
+            <p>Eleven providers are lined up for direct integration: Pesa, Nala, Send, Taptap Send, Remitly, Wise, MonieWorld, LemFi, Sendwave, Grey and Access Bank. Each will be added as an adapter behind the same quote format, so the comparison logic and front end don't change as vendors are added.</p>
+            <div class="callout"><p><b>Honest status:</b> the market rate is live, but today's quotes are modelled estimates by transfer type (each quote is flagged <span class='mono'>isEstimate: true</span> in the API), not each provider's own live price. The site says this on its Providers page.</p></div>
+
+            <h2>What it shows</h2>
+            <ul>
+                <li>Designing a clean API contract that hides data-source differences.</li>
+                <li>Aggregation and ranking logic that turns raw rates into one clear answer.</li>
+                <li>Being transparent about data quality in a financial product.</li>
+            </ul>
+    </article>
+
+    <aside class="aside">
+        <div class="box">
+            <h4>See it</h4>
+            <div class="links">
+                <a href="https://pas-fx-compare.onrender.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fas fa-arrow-up-right-from-square"></i> Open live application</a>
+                <a href="https://github.com/Adebowale-123/pas-fx-compare" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fab fa-github"></i> View source on GitHub</a>
+            </div>
+        </div>
+        <div class="box">
+            <h4>Built with</h4>
+            <div class="tags" style="margin:0"><span class="tag">REST API</span><span class="tag">Exchange-rate data</span><span class="tag">Comparison logic</span><span class="tag">JavaScript</span><span class="tag">Responsive UI</span><span class="tag">Render</span></div>
+        </div>
+        <a class="next-project" href="signaldesk.html"><small>Next project →</small><b>Automated Forex Trading Platform (SignalDesk FX)</b></a>
+    </aside>
+</div>
+
+<footer>
+    <div class="container footer-inner">
+        <span>© <span id="year">2026</span> Your Name</span>
+        <a href="../index.html#contact">Get in touch →</a>
+    </div>
+</footer>
+
+<script src="../script.js?v=1"></script>
+</body>
+</html>

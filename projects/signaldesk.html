@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Forex Trading Platform (SignalDesk FX) · Your Name</title>
+    <meta name="description" content="A private trading desk that analyses the major forex pairs and gold, says TRADE NOW or WAIT with its reasons, and can place the trade automatically with stop loss and take profit attached.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css?v=1">
+</head>
+<body>
+
+<nav class="nav">
+    <div class="container nav-inner">
+        <a href="../index.html" class="logo"><span class="logo-mark">YN</span> Your Name</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#projects" class="active">Projects</a></li>
+            <li><a href="../index.html#skills">Skills &amp; Technologies</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="../index.html#contact" class="btn btn-primary btn-sm">Hire me</a>
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </div>
+</nav>
+
+<header class="case-hero">
+    <div class="container">
+        <a href="../index.html#projects" class="back"><i class="fas fa-arrow-left"></i> All projects</a>
+        <div class="project-num">05</div>
+        <h1>Automated Forex Trading Platform (SignalDesk FX)</h1>
+        <div class="badges"><span class="badge live">Live</span><span class="badge note">Backtested · demo account only, no real money</span></div>
+        <p class="lead">A private trading desk that analyses the major forex pairs and gold, says TRADE NOW or WAIT with its reasons, and can place the trade automatically with stop loss and take profit attached.</p>
+        <div class="case-meta"><div><b>Type</b><span>Personal product</span></div><div><b>Role</b><span>Design, quant logic &amp; build</span></div><div><b>Stack</b><span>Django · pandas · PostgreSQL</span></div><div><b>Status</b><span>Live · demo trading</span></div></div>
+    </div>
+</header>
+
+<div class="container case-body">
+    <article>
+            <div class="callout"><p><b>Trading status, stated plainly:</b> the strategies are <b>backtested</b> on historical data, and since October 2026 the system has been <b>forward-testing on a Capital.com demo account</b> (virtual money). It has <b>not</b> traded real money. The plan is to review 4–8 weeks of demo results before considering a live account.</p></div>
+
+            <h2>The problem</h2>
+            <p>Manual trading decisions are inconsistent: traders enter too early, ignore news events and forget their own rules. SignalDesk turns a written trading plan into code that checks every market every few minutes and only acts when all the rules agree.</p>
+
+            <figure>
+                <div class="frame">
+                    <div class="frame-bar"><i></i><i></i><i></i><span class="url">signaldesk-fx.onrender.com</span></div>
+                    <picture><source srcset="../images/signaldesk-signals.webp" type="image/webp"><img src="../images/signaldesk-signals.jpg" alt="The live decision desk: market sessions, news, and a WAIT/TRADE card per pair" width="1200" height="750" loading="lazy"></picture>
+                </div>
+                <figcaption>The live decision desk: market sessions, news, and a WAIT/TRADE card per pair</figcaption>
+            </figure>
+
+            <h2>Trading logic</h2>
+            <ul>
+                <li><b>Data</b>: closed candles only (no repainting) for 8 instruments, from Yahoo by default, with Twelve Data and OANDA as optional providers.</li>
+                <li><b>Analysis</b>: higher-timeframe trend agreement, EMA trend, momentum (RSI, MACD), and a setup (pullback to the fast EMA or a 20-candle breakout), plus market condition (ADX, volatility, session).</li>
+                <li><b>Score out of 100</b>: TRADE NOW only if the score reaches the minimum and no hard WAIT rule applies (market closed, outside session, timeframes disagree, ranging market, RSI stretched, volatility spike, high-impact news due).</li>
+                <li><b>Risk</b>: stop loss beyond the last swing and never tighter than 1 ATR; take profit at a set risk-reward ratio; position size risks 1% of the balance; at most 3 open trades.</li>
+            </ul>
+
+            <h2>Backtesting and self-tuning</h2>
+            <ul>
+                <li>A backtest engine replays history and records how often similar-scoring setups reached take profit before stop loss. The confidence shown on each signal comes from these real backtest results, not from a made-up number.</li>
+                <li>Self-tuning is walk-forward: it picks the best parameter variation on the older 70% of the data and adopts it only if it also holds up on the newest 30%. Strategy discovery uses the same test.</li>
+                <li>Every live signal is tracked to TP, SL or expiry on a Track record page, so backtest and forward results can be compared.</li>
+            </ul>
+
+            <figure>
+                <div class="frame">
+                    <div class="frame-bar"><i></i><i></i><i></i><span class="url">signaldesk-fx.onrender.com/auto-trading/</span></div>
+                    <picture><source srcset="../images/signaldesk-autotrading.webp" type="image/webp"><img src="../images/signaldesk-autotrading.jpg" alt="Auto-trading: broker connection, balance, open trades and the reason for every skipped signal" width="1200" height="750" loading="lazy"></picture>
+                </div>
+                <figcaption>Auto-trading: broker connection, balance, open trades and the reason for every skipped signal</figcaption>
+            </figure>
+
+            <h2>Reliability</h2>
+            <ul>
+                <li><b>Server-side only</b>: runs on Render with Neon PostgreSQL; an external cron calls the analysis every 5 minutes. Nothing needs to stay on a PC.</li>
+                <li><b>Alerts on failure</b>: every trade, and every error, is sent to Telegram.</li>
+                <li><b>Broker-side protection</b>: stop loss and take profit are attached at the broker, so a server outage can't leave a trade unprotected.</li>
+                <li><b>Lessons turned into tests</b>: the first demo trade was lost to a column-length overflow that SQLite tests didn't catch but production PostgreSQL did. I fixed it, added column-length tests, and made such failures alert immediately. The suite has 110 automated tests.</li>
+            </ul>
+    </article>
+
+    <aside class="aside">
+        <div class="box">
+            <h4>See it</h4>
+            <div class="links">
+                <a href="https://signaldesk-fx.onrender.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fas fa-arrow-up-right-from-square"></i> Open live application</a>
+                <a href="https://github.com/Adebowale-123/SignalDesk-FX" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fab fa-github"></i> View source on GitHub</a>
+            </div>
+        </div>
+        <div class="box">
+            <h4>Built with</h4>
+            <div class="tags" style="margin:0"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">pandas</span><span class="tag">NumPy</span><span class="tag">PostgreSQL</span><span class="tag">Capital.com API</span><span class="tag">OANDA API</span><span class="tag">Telegram</span><span class="tag">110 tests</span></div>
+        </div>
+        <a class="next-project" href="nextgen.html"><small>Next project →</small><b>NextGen: Lucky-Number Prize Draw Platform</b></a>
+    </aside>
+</div>
+
+<footer>
+    <div class="container footer-inner">
+        <span>© <span id="year">2026</span> Your Name</span>
+        <a href="../index.html#contact">Get in touch →</a>
+    </div>
+</footer>
+
+<script src="../script.js?v=1"></script>
+</body>
+</html>

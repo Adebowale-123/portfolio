@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Lead Generation Platform · Your Name</title>
+    <meta name="description" content="The data side of the AI Employee: how marketing contacts are collected, cleaned, scored, organised and managed, and the permissions and compliance rules that govern each step.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css?v=1">
+</head>
+<body>
+
+<nav class="nav">
+    <div class="container nav-inner">
+        <a href="../index.html" class="logo"><span class="logo-mark">YN</span> Your Name</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#projects" class="active">Projects</a></li>
+            <li><a href="../index.html#skills">Skills &amp; Technologies</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="../index.html#contact" class="btn btn-primary btn-sm">Hire me</a>
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </div>
+</nav>
+
+<header class="case-hero">
+    <div class="container">
+        <a href="../index.html#projects" class="back"><i class="fas fa-arrow-left"></i> All projects</a>
+        <div class="project-num">02</div>
+        <h1>Automated Lead Generation Platform</h1>
+        <div class="badges"><span class="badge live">Live</span><span class="badge">Data quality</span><span class="badge">Compliance</span></div>
+        <p class="lead">The data side of the AI Employee: how marketing contacts are collected, cleaned, scored, organised and managed, and the permissions and compliance rules that govern each step.</p>
+        <div class="case-meta"><div><b>Client</b><span>BorderlessTek (UK)</span></div><div><b>Role</b><span>Data design &amp; build</span></div><div><b>Stack</b><span>Django · PostgreSQL</span></div><div><b>Status</b><span>Live on Render</span></div></div>
+    </div>
+</header>
+
+<div class="container case-body">
+    <article>
+            <h2>Collect: sources and permissions</h2>
+            <ul>
+                <li><b>Reddit parent communities</b>: public RSS feeds only, read anonymously, at least 30 seconds between requests to respect rate limits. No login, no scraping behind authentication.</li>
+                <li><b>Google Alerts</b>: the team's own alert feeds, delivered as RSS.</li>
+                <li><b>Custom RSS feeds</b>: any public feed the team adds in Settings.</li>
+                <li><b>Manual paste</b>: Facebook groups can't (and shouldn't) be read automatically, so a team member pastes a post they've found and gets the same score and draft.</li>
+            </ul>
+            <p>Each source is a database record that can be switched on or off, with its last run, items found and errors visible on the Sources page.</p>
+
+            <h2>Process: data quality</h2>
+            <ul>
+                <li><b>De-duplication</b>: every post is stored with a unique external ID, so a post seen in several feeds or several runs is processed once.</li>
+                <li><b>Normalisation</b>: titles and bodies are cleaned of HTML entities and whitespace; ages and topics are extracted into structured fields ("child 9", "STEM").</li>
+                <li><b>Filtering</b>: adult learners, adverts, job posts and off-topic content are rejected with a reason, not silently dropped, so the rules can be audited and improved.</li>
+                <li><b>Scoring</b>: a 0–100 score with the contributing signals stored alongside it. Posts are bucketed into to-reply, lower scores and not relevant.</li>
+            </ul>
+
+            <figure>
+                <div class="frame">
+                    <div class="frame-bar"><i></i><i></i><i></i><span class="url">borderlesstek-growth.onrender.com/leads/</span></div>
+                    <picture><source srcset="../images/borderlesstek-pipeline.webp" type="image/webp"><img src="../images/borderlesstek-pipeline.jpg" alt="The six-stage lead pipeline, from New to Enrolled" width="1200" height="750" loading="lazy"></picture>
+                </div>
+                <figcaption>The six-stage lead pipeline, from New to Enrolled</figcaption>
+            </figure>
+
+            <h2>Organise and manage</h2>
+            <ul>
+                <li>Leads move through <b>New → Contacted → In conversation → Call booked → Enrolled / Not now</b>.</li>
+                <li>Each lead keeps its origin (which post, which source), notes and a full history of status changes, so the team can see which channels actually produce enrolments.</li>
+                <li>Follow-up dates are created automatically and surface on the Today screen when due.</li>
+                <li>Search across names, emails and notes.</li>
+            </ul>
+
+            <h2>Compliance and children's data</h2>
+            <ul>
+                <li><b>Only public or volunteered data.</b> The tool stores what a parent posted publicly or told the team directly.</li>
+                <li><b>No children's names, ever.</b> Only the child's age is recorded, because that's what the advice depends on.</li>
+                <li><b>No automated outreach.</b> No auto-posting, no cold DMs, no bulk email, in line with PECR and each platform's rules. Every message is sent by a person, with an honest disclosure of who they work for.</li>
+                <li><b>Access control.</b> The app is private behind a login; credentials live only in the hosting provider's environment settings.</li>
+            </ul>
+            <div class="callout"><p><b>Note:</b> this project and the AI Employee are the same codebase seen from two angles: the AI Employee case study covers the automated workflow; this one covers the data and compliance design.</p></div>
+    </article>
+
+    <aside class="aside">
+        <div class="box">
+            <h4>See it</h4>
+            <div class="links">
+                <a href="https://borderlesstek-growth.onrender.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fas fa-arrow-up-right-from-square"></i> Open live application</a>
+                <a href="https://github.com/Adebowale-123/BorderlessTek-Growth" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fab fa-github"></i> View source on GitHub</a>
+            </div>
+        </div>
+        <div class="box">
+            <h4>Built with</h4>
+            <div class="tags" style="margin:0"><span class="tag">Python</span><span class="tag">Django ORM</span><span class="tag">PostgreSQL</span><span class="tag">RSS</span><span class="tag">Data modelling</span><span class="tag">GDPR</span><span class="tag">PECR</span></div>
+        </div>
+        <a class="next-project" href="agri-food-lms.html"><small>Next project →</small><b>Agri-Food Innovation LMS</b></a>
+    </aside>
+</div>
+
+<footer>
+    <div class="container footer-inner">
+        <span>© <span id="year">2026</span> Your Name</span>
+        <a href="../index.html#contact">Get in touch →</a>
+    </div>
+</footer>
+
+<script src="../script.js?v=1"></script>
+</body>
+</html>

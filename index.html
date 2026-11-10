@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name · Full-Stack & Automation Developer</title>
+    <meta name="description" content="Full-stack Python/Django developer building automation, AI-assisted workflows and data-driven web platforms. Six live projects: lead generation, an LMS, FX rate comparison, algorithmic trading and a fintech draw platform.">
+    <meta property="og:title" content="Your Name · Full-Stack & Automation Developer">
+    <meta property="og:description" content="I build automation and full-stack web platforms that run real businesses. See six live projects.">
+    <meta property="og:image" content="images/borderlesstek-today.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+
+<nav class="nav">
+    <div class="container nav-inner">
+        <a href="#home" class="logo"><span class="logo-mark">YN</span> Your Name</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills &amp; Technologies</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="#contact" class="btn btn-primary btn-sm">Hire me</a>
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </div>
+</nav>
+
+<!-- HOME: what I build, what I solve, where to see it -->
+<header class="hero" id="home">
+    <div class="container hero-grid">
+        <div>
+            <span class="eyebrow"><span class="dot"></span> Open to full-time &amp; remote roles</span>
+            <h1>I build <span>automation and web platforms</span> that run real businesses.</h1>
+            <p class="lead">Full-stack developer (Python, Django, PostgreSQL, JavaScript). I turn manual work into software that runs by itself: finding customers, selling courses, comparing prices and making trading decisions.</p>
+
+            <div class="answers">
+                <div class="answer"><i class="fas fa-code"></i><div><b>What I build:</b> <span>business automation, AI-assisted workflows, full-stack web apps and data/API platforms.</span></div></div>
+                <div class="answer"><i class="fas fa-wrench"></i><div><b>Problems I solve:</b> <span>slow manual marketing, offline training, messy price data and decisions that need rules and an audit trail.</span></div></div>
+                <div class="answer"><i class="fas fa-arrow-up-right-from-square"></i><div><b>See my work:</b> <span>six projects below, five of them live, with source code on <a href="https://github.com/Adebowale-123" target="_blank" rel="noopener">GitHub</a>.</span></div></div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">See my projects <i class="fas fa-arrow-down"></i></a>
+                <a href="https://github.com/Adebowale-123" target="_blank" rel="noopener" class="btn btn-ghost"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </div>
+
+        <div class="hero-shot reveal">
+            <div class="frame">
+                <div class="frame-bar"><i></i><i></i><i></i><span class="url">agrifiacademy.com</span></div>
+                <picture><source srcset="images/agrifi-home.webp" type="image/webp"><img src="images/agrifi-home.jpg" alt="Agri-Food Innovation Academy learning platform" width="1200" height="750"></picture>
+            </div>
+            <div class="frame back">
+                <div class="frame-bar"><i></i><i></i><i></i><span class="url">signaldesk-fx.onrender.com</span></div>
+                <picture><source srcset="images/signaldesk-signals.webp" type="image/webp"><img src="images/signaldesk-signals.jpg" alt="SignalDesk FX live decision desk" width="1200" height="750"></picture>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- PROBLEMS I SOLVE -->
+<section class="section-alt">
+    <div class="container">
+        <div class="section-head reveal">
+            <div class="kicker">// problems I solve</div>
+            <h2>Work that used to take hours, done by software.</h2>
+            <p>Each of these is backed by a project you can open and use.</p>
+        </div>
+        <div class="problems">
+            <div class="problem reveal">
+                <div class="ico"><i class="fas fa-user-plus"></i></div>
+                <h3>"We need more customers but have no time to look for them."</h3>
+                <p>A system that finds people asking for your service, drafts a helpful reply and tracks every lead to a sale.</p>
+                <a class="proof" href="projects/ai-employee.html">See the AI Employee →</a>
+            </div>
+            <div class="problem reveal">
+                <div class="ico"><i class="fas fa-graduation-cap"></i></div>
+                <h3>"We want to sell our training online."</h3>
+                <p>A learning platform with course catalogues, accounts, online payments and certification.</p>
+                <a class="proof" href="projects/agri-food-lms.html">See the AgriFI LMS →</a>
+            </div>
+            <div class="problem reveal">
+                <div class="ico"><i class="fas fa-scale-balanced"></i></div>
+                <h3>"Prices are scattered across many providers."</h3>
+                <p>APIs that collect, normalise and compare data from many sources, shown in one clear answer.</p>
+                <a class="proof" href="projects/fx-compare.html">See PAS FX Compare →</a>
+            </div>
+            <div class="problem reveal">
+                <div class="ico"><i class="fas fa-shield-halved"></i></div>
+                <h3>"Our decisions must follow rules and be auditable."</h3>
+                <p>Rule engines, backtests, ledgers and alerts, so money-moving software stays predictable.</p>
+                <a class="proof" href="projects/signaldesk.html">See SignalDesk FX →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <div class="container">
+        <div class="section-head reveal">
+            <div class="kicker">// projects</div>
+            <h2>Selected work</h2>
+            <p>Ordered by what they show best. Each card links to a short case study, the live application and the source code.</p>
+        </div>
+
+        <!-- 01 Flagship -->
+        <div class="featured reveal">
+            <div>
+                <div class="project-num">01 · Flagship project</div>
+                <div class="badges">
+                    <span class="badge flag">Featured</span>
+                    <span class="badge live">Live</span>
+                    <span class="badge">Agentic workflow</span>
+                </div>
+                <h3>AI Employee for Marketing &amp; Onboarding</h3>
+                <p>A digital team member for BorderlessTek, a UK online school teaching children digital skills. Every few hours it searches parent communities, picks the conversations where a parent is looking for coding or design classes, writes a helpful reply and moves interested families through to an onboarding call.</p>
+                <ul class="checks">
+                    <li><i class="fas fa-check"></i>Runs unattended on a schedule: search, score, draft, follow up, daily summary</li>
+                    <li><i class="fas fa-check"></i>Scores each post out of 100 with explainable reasons</li>
+                    <li><i class="fas fa-check"></i>A human approves every reply, by design (platform rules, GDPR/PECR)</li>
+                </ul>
+                <div class="tags"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">PostgreSQL</span><span class="tag">RSS</span><span class="tag">Telegram API</span><span class="tag">Cron</span><span class="tag">Render</span></div>
+                <div class="links">
+                    <a href="projects/ai-employee.html" class="btn btn-primary btn-sm">Read case study</a>
+                    <a href="https://borderlesstek-growth.onrender.com" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fas fa-arrow-up-right-from-square"></i> Live app</a>
+                    <a href="https://github.com/Adebowale-123/BorderlessTek-Growth" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+            <div class="frame">
+                <div class="frame-bar"><i></i><i></i><i></i><span class="url">borderlesstek-growth.onrender.com/finder/</span></div>
+                <picture><source srcset="images/borderlesstek-replies.webp" type="image/webp"><img src="images/borderlesstek-replies.jpg" alt="Parents to reply to: a scored parent post next to its drafted reply" width="1200" height="750" loading="lazy"></picture>
+            </div>
+        </div>
+
+        <div class="project-grid">
+            <!-- 02 -->
+            <div class="card reveal">
+                <div class="frame">
+                    <div class="frame-bar"><i></i><i></i><i></i><span class="url">borderlesstek-growth.onrender.com</span></div>
+                    <picture><source srcset="images/borderlesstek-today.webp" type="image/webp"><img src="images/borderlesstek-today.jpg" alt="Daily lead dashboard with reply queue and six-stage pipeline" width="1200" height="750" loading="lazy"></picture>
+                </div>
+                <div class="card-body">
+                    <div class="project-num">02</div>
+                    <div class="badges"><span class="badge live">Live</span><span class="badge">Data &amp; compliance</span></div>
+                    <h3>Automated Lead Generation Platform</h3>
+                    <p>How contacts are collected, cleaned, de-duplicated, scored and managed through a six-stage pipeline, using only public sources, with documented permissions and a strict children's-data policy.</p>
+                    <div class="tags"><span class="tag">Data pipeline</span><span class="tag">Scoring</span><span class="tag">GDPR</span><span class="tag">PECR</span></div>
+                    <div class="links">
+                        <a href="projects/lead-generation.html" class="btn btn-primary btn-sm">Read case study</a>
+                        <a href="https://borderlesstek-growth.onrender.com" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+                        <a href="https://github.com/Adebowale-123/BorderlessTek-Growth" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 03 -->
+            <div class="card reveal">
+                <div class="frame">
+                    <div class="frame-bar"><i></i><i></i><i></i><span class="url">agrifiacademy.com</span></div>
+                    <picture><source srcset="images/agrifi-home.webp" type="image/webp"><img src="images/agrifi-home.jpg" alt="Agri-Food Innovation Academy homepage" width="1200" height="750" loading="lazy"></picture>
+                </div>
+                <div class="card-body">
+                    <div class="project-num">03</div>
+                    <div class="badges"><span class="badge live">Live · real customers</span><span class="badge">Full-stack</span></div>
+                    <h3>Agri-Food Innovation LMS</h3>
+                    <p>A learning and certification platform for a Nigeria/UK training academy: 7 faculties and 45 courses, learner accounts, course enrolment with online payment, events and a blog.</p>
+                    <div class="tags"><span class="tag">SPA + REST API</span><span class="tag">Auth</span><span class="tag">Paystack</span><span class="tag">Analytics</span></div>
+                    <div class="links">
+                        <a href="projects/agri-food-lms.html" class="btn btn-primary btn-sm">Read case study</a>
+                        <a href="https://agrifiacademy.com/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+                        <a href="https://github.com/Adebowale-123/agri-food-academy" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 04 -->
+            <div class="card reveal">
+                <div class="frame">
+                    <div class="frame-bar"><i></i><i></i><i></i><span class="url">pas-fx-compare.onrender.com</span></div>
+                    <picture><source srcset="images/pasfx-home.webp" type="image/webp"><img src="images/pasfx-home.jpg" alt="PAS FX Compare converter showing GBP to NGN" width="1200" height="750" loading="lazy"></picture>
+                </div>
+                <div class="card-body">
+                    <div class="project-num">04</div>
+                    <div class="badges"><span class="badge live">Live</span><span class="badge">APIs &amp; aggregation</span></div>
+                    <h3>Currency Rate Comparison Platform</h3>
+                    <p>Takes the live market rate for 160+ currencies, works out what the recipient actually receives after each transfer method's fee and margin, and ranks the options. Integrations with 11 providers (Wise, Remitly, LemFi and others) are in progress.</p>
+                    <div class="badges"><span class="badge note">Provider quotes are estimates for now</span></div>
+                    <div class="tags"><span class="tag">REST API</span><span class="tag">Rate aggregation</span><span class="tag">Comparison logic</span></div>
+                    <div class="links">
+                        <a href="projects/fx-compare.html" class="btn btn-primary btn-sm">Read case study</a>
+                        <a href="https://pas-fx-compare.onrender.com/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+                        <a href="https://github.com/Adebowale-123/pas-fx-compare" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 05 -->
+            <div class="card reveal">
+                <div class="frame">
+                    <div class="frame-bar"><i></i><i></i><i></i><span class="url">signaldesk-fx.onrender.com</span></div>
+                    <picture><source srcset="images/signaldesk-signals.webp" type="image/webp"><img src="images/signaldesk-signals.jpg" alt="SignalDesk FX decision desk with forex pairs" width="1200" height="750" loading="lazy"></picture>
+                </div>
+                <div class="card-body">
+                    <div class="project-num">05</div>
+                    <div class="badges"><span class="badge live">Live</span><span class="badge note">Backtested · demo account only</span></div>
+                    <h3>Automated Forex Trading Platform (SignalDesk)</h3>
+                    <p>Analyses 8 forex and gold markets across timeframes, scores setups, avoids news events and places trades with stop loss and take profit. Backtested on historical data and trading a broker <b>demo</b> account. No real money yet.</p>
+                    <div class="tags"><span class="tag">pandas</span><span class="tag">Backtesting</span><span class="tag">Broker API</span><span class="tag">110 tests</span></div>
+                    <div class="links">
+                        <a href="projects/signaldesk.html" class="btn btn-primary btn-sm">Read case study</a>
+                        <a href="https://signaldesk-fx.onrender.com/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+                        <a href="https://github.com/Adebowale-123/SignalDesk-FX" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 06 -->
+            <div class="card reveal">
+                <div class="frame">
+                    <div class="frame-bar"><i></i><i></i><i></i><span class="url">nextgen-game.onrender.com</span></div>
+                    <picture><source srcset="images/nextgen-home.webp" type="image/webp"><img src="images/nextgen-home.jpg" alt="NextGen Game homepage with today's draw" width="1200" height="750" loading="lazy"></picture>
+                </div>
+                <div class="card-body">
+                    <div class="project-num">06</div>
+                    <div class="badges"><span class="badge">Sandbox demo</span><span class="badge">Fintech</span></div>
+                    <h3>NextGen: Lucky-Number Prize Draw Platform</h3>
+                    <p>Players pick numbers, join a pool, and a provably fair draw picks the winner of the grand prize. Built around a double-entry wallet ledger, KYC tiers, responsible-gaming limits and a back office.</p>
+                    <div class="tags"><span class="tag">Provably fair RNG</span><span class="tag">Ledger</span><span class="tag">Payments</span><span class="tag">123 tests</span></div>
+                    <div class="links">
+                        <a href="projects/nextgen.html" class="btn btn-primary btn-sm">Read case study</a>
+                        <a href="https://nextgen-game.onrender.com/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fas fa-arrow-up-right-from-square"></i> Demo</a>
+                        <a href="https://github.com/Adebowale-123/nextGen" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section-alt">
+    <div class="container">
+        <div class="section-head reveal">
+            <div class="kicker">// skills &amp; technologies</div>
+            <h2>The tools I ship with</h2>
+            <p>Grouped by what they're for. Everything listed here is used in at least one project above.</p>
+        </div>
+        <div class="skills">
+            <div class="skill-group reveal">
+                <h3><i class="fas fa-server"></i> Back end</h3>
+                <div class="tags"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">REST APIs</span><span class="tag">Background jobs</span><span class="tag">Webhooks</span></div>
+                <small>Used in: all six projects</small>
+            </div>
+            <div class="skill-group reveal">
+                <h3><i class="fas fa-database"></i> Data</h3>
+                <div class="tags"><span class="tag">PostgreSQL</span><span class="tag">SQLite</span><span class="tag">Data modelling</span><span class="tag">Migrations</span><span class="tag">pandas</span><span class="tag">NumPy</span></div>
+                <small>Used in: SignalDesk, NextGen, BorderlessTek Growth</small>
+            </div>
+            <div class="skill-group reveal">
+                <h3><i class="fas fa-display"></i> Front end</h3>
+                <div class="tags"><span class="tag">JavaScript</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Responsive UI</span><span class="tag">Single-page apps</span></div>
+                <small>Used in: PAS FX Compare, AgriFI, every dashboard</small>
+            </div>
+            <div class="skill-group reveal">
+                <h3><i class="fas fa-robot"></i> Automation &amp; AI workflows</h3>
+                <div class="tags"><span class="tag">Agentic pipelines</span><span class="tag">Scoring engines</span><span class="tag">RSS / scraping-free sourcing</span><span class="tag">Scheduled jobs</span><span class="tag">Telegram bots</span></div>
+                <small>Used in: AI Employee, SignalDesk</small>
+            </div>
+            <div class="skill-group reveal">
+                <h3><i class="fas fa-plug"></i> Integrations</h3>
+                <div class="tags"><span class="tag">Capital.com API</span><span class="tag">OANDA API</span><span class="tag">Paystack</span><span class="tag">Exchange-rate APIs</span><span class="tag">SMTP email</span></div>
+                <small>Used in: SignalDesk, NextGen, AgriFI, PAS FX</small>
+            </div>
+            <div class="skill-group reveal">
+                <h3><i class="fas fa-cloud-arrow-up"></i> Delivery</h3>
+                <div class="tags"><span class="tag">Git &amp; GitHub</span><span class="tag">Render</span><span class="tag">Neon</span><span class="tag">cPanel</span><span class="tag">Automated tests</span><span class="tag">Security basics</span></div>
+                <small>250+ automated tests across SignalDesk and NextGen</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+    <div class="container">
+        <div class="section-head reveal">
+            <div class="kicker">// experience</div>
+            <h2>Where I've built things</h2>
+        </div>
+        <div class="timeline">
+            <div class="role reveal">
+                <div class="role-card">
+                    <div class="role-top">
+                        <div><h3>Full-Stack &amp; Automation Developer</h3><div class="org">Independent / Freelance</div></div>
+                        <div class="when">20XX – Present</div>
+                    </div>
+                    <ul>
+                        <li>Designed, built and deployed six production web applications end to end, from database design to hosting.</li>
+                        <li>Delivered the Agri-Food Innovation Academy LMS, now used by a training business in Nigeria and the UK.</li>
+                        <li>Built a currency comparison API and front end covering 160+ currencies, ranking transfer options by what the recipient receives.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="role reveal">
+                <div class="role-card">
+                    <div class="role-top">
+                        <div><h3>Founder &amp; Technical Lead</h3><div class="org">BorderlessTek (UK online digital-skills school)</div></div>
+                        <div class="when">20XX – Present</div>
+                    </div>
+                    <ul>
+                        <li>Run a school teaching coding, animation and design to around 100 children aged 6–16.</li>
+                        <li>Built the AI Employee and lead pipeline that find and onboard new families.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="role reveal">
+                <div class="role-card">
+                    <div class="role-top">
+                        <div><h3>Your Role</h3><div class="org">Yesdin (digital skills &amp; technology, Nigeria)</div></div>
+                        <div class="when">20XX – Present</div>
+                    </div>
+                    <ul>
+                        <li>Maintain the company website and launched the Mobile Tech Truck sponsorship programme page.</li>
+                        <li>Support IGNITE digital-skills training for young people.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section-alt">
+    <div class="container about-grid">
+        <div class="reveal">
+            <div class="section-head" style="margin-bottom:20px">
+                <div class="kicker">// about</div>
+                <h2>A developer who starts from the business problem.</h2>
+            </div>
+            <p>I build software for organisations I know from the inside: a children's coding school, a food-industry training academy, a remittance comparison service and a trading desk. That keeps me focused on what the software has to achieve, not just on the code.</p>
+            <p>My stack is Python and Django on PostgreSQL, with plain JavaScript where it keeps things fast. I care about the parts users don't see: automated tests, audit trails, honest numbers, and staying within platform rules and data-protection law.</p>
+            <p>I'm looking for a role where I can build automation, internal tools or AI-assisted products with a team that ships.</p>
+        </div>
+        <div class="facts reveal">
+            <div class="fact"><b>6</b><span>applications built and deployed</span></div>
+            <div class="fact"><b>5</b><span>live on the web today</span></div>
+            <div class="fact"><b>250+</b><span>automated tests written</span></div>
+            <div class="fact"><b>NG · UK</b><span>clients and users in both</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="container">
+        <div class="contact reveal">
+            <div>
+                <h2>Let's talk about your team's next project.</h2>
+                <p>I'm open to full-time, contract and remote roles. Email is the fastest way to reach me; I usually reply within a day.</p>
+                <div class="hero-actions"><a href="mailto:mailyesdin@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> Email me</a></div>
+            </div>
+            <div class="contact-list">
+                <a class="contact-item" href="mailto:mailyesdin@gmail.com"><i class="fas fa-envelope"></i> mailyesdin@gmail.com</a>
+                <a class="contact-item" href="https://github.com/Adebowale-123" target="_blank" rel="noopener"><i class="fab fa-github"></i> github.com/Adebowale-123</a>
+                <a class="contact-item" href="https://www.linkedin.com/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn profile</a>
+                <a class="contact-item" href="cv.pdf" target="_blank"><i class="fas fa-file-arrow-down"></i> Download CV (PDF)</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container footer-inner">
+        <span>© <span id="year">2026</span> Your Name</span>
+        <span>Built by hand with HTML, CSS and JavaScript.</span>
+    </div>
+</footer>
+
+<script src="script.js?v=1"></script>
+</body>
+</html>

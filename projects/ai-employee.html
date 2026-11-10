@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Employee for Marketing & Onboarding · Your Name</title>
+    <meta name="description" content="A digital team member that finds parents looking for children's coding classes, drafts a helpful reply for each one, and follows every family through to an onboarding call, every day, without being asked.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css?v=1">
+</head>
+<body>
+
+<nav class="nav">
+    <div class="container nav-inner">
+        <a href="../index.html" class="logo"><span class="logo-mark">YN</span> Your Name</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#projects" class="active">Projects</a></li>
+            <li><a href="../index.html#skills">Skills &amp; Technologies</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="../index.html#contact" class="btn btn-primary btn-sm">Hire me</a>
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </div>
+</nav>
+
+<header class="case-hero">
+    <div class="container">
+        <a href="../index.html#projects" class="back"><i class="fas fa-arrow-left"></i> All projects</a>
+        <div class="project-num">01 · Flagship project</div>
+        <h1>AI Employee for Marketing &amp; Onboarding</h1>
+        <div class="badges"><span class="badge flag">Featured</span><span class="badge live">Live</span><span class="badge">Agentic workflow</span></div>
+        <p class="lead">A digital team member that finds parents looking for children's coding classes, drafts a helpful reply for each one, and follows every family through to an onboarding call, every day, without being asked.</p>
+        <div class="case-meta"><div><b>Client</b><span>BorderlessTek (UK)</span></div><div><b>Role</b><span>Product, design &amp; build</span></div><div><b>Stack</b><span>Django · PostgreSQL</span></div><div><b>Status</b><span>Live on Render</span></div></div>
+    </div>
+</header>
+
+<div class="container case-body">
+    <article>
+            <h2>The problem</h2>
+            <p>BorderlessTek teaches coding, animation and design online to children aged 6–16. Every day, parents ask in public communities where their child can learn these skills, but nobody on a small team has hours to search Reddit, Mumsnet and Google every morning, reply thoughtfully and remember to follow up.</p>
+            <p>The goal was an "employee" that does the searching, sorting, writing and remembering, so the team only spends about two minutes per family.</p>
+
+            <figure>
+                <div class="frame">
+                    <div class="frame-bar"><i></i><i></i><i></i><span class="url">borderlesstek-growth.onrender.com</span></div>
+                    <picture><source srcset="../images/borderlesstek-today.webp" type="image/webp"><img src="../images/borderlesstek-today.jpg" alt="The Today screen: who to reply to, pipeline counts and follow-ups due" width="1200" height="750" loading="lazy"></picture>
+                </div>
+                <figcaption>The Today screen: who to reply to, pipeline counts and follow-ups due</figcaption>
+            </figure>
+
+            <h2>What it does, step by step</h2>
+            <ul>
+                <li><b>Searches on a schedule.</b> An external cron job calls the app's tick endpoint on a schedule. It reads public parent communities on Reddit, the team's Google Alerts and any RSS feeds they add, with rate limiting to respect each source.</li>
+                <li><b>Understands each post.</b> A scoring engine gives every post a score out of 100: is a parent talking about their child, the child's age, the topic (coding, Scratch, Python, animation, robotics, AI…), whether they're asking for recommendations, and the country. Adult learners, adverts and off-topic posts are filtered out. Every score comes with a plain-English reason.</li>
+                <li><b>Writes a reply.</b> For each good match it drafts age-appropriate advice with free resources first, then an honest disclosure line and a tracked booking link.</li>
+                <li><b>Hands over to a human.</b> A team member reviews, edits, posts the reply as themselves and clicks "I replied".</li>
+                <li><b>Follows up.</b> Interested parents become leads. Follow-ups are scheduled at 2, 5 and 10 days with a ready-to-send message.</li>
+                <li><b>Reports daily.</b> A morning summary arrives on Telegram and/or email: parents to reply to, follow-ups due, calls booked.</li>
+            </ul>
+
+            <figure>
+                <div class="frame">
+                    <div class="frame-bar"><i></i><i></i><i></i><span class="url">borderlesstek-growth.onrender.com/finder/</span></div>
+                    <picture><source srcset="../images/borderlesstek-replies.webp" type="image/webp"><img src="../images/borderlesstek-replies.jpg" alt="Each post sits next to its drafted reply, with the score and the reasons for it" width="1200" height="750" loading="lazy"></picture>
+                </div>
+                <figcaption>Each post sits next to its drafted reply, with the score and the reasons for it</figcaption>
+            </figure>
+
+            <h2>Key decisions</h2>
+            <ul>
+                <li><b>Human in the loop, on purpose.</b> Automated posting and unsolicited DMs are banned by Reddit, Facebook, Instagram and WhatsApp, and break UK/EU marketing law (PECR, GDPR). For a children's brand, trust is everything. So the agent finds the conversations and does the writing; a person presses send.</li>
+                <li><b>Explainable scoring before a language model.</b> The first version uses transparent rules, so the team can see exactly why a post scored 86 and tune it. Drafts are built from templates for the same reason, and to keep running costs at zero until results justify an LLM.</li>
+                <li><b>No server to babysit.</b> Everything runs on Render with a Neon PostgreSQL database; an external cron service wakes it up. Nothing needs to stay on anyone's PC.</li>
+            </ul>
+            <div class="callout"><p><b>Honest scope:</b> the current version uses rule-based scoring and template-based drafting, with no large language model yet. Adding LLM-written drafts (Claude API) is the next planned phase, alongside an assistant on the school's website and WhatsApp/Instagram replies.</p></div>
+
+            <h2>What it shows</h2>
+            <ul>
+                <li>Designing an agent-style workflow: sense → decide → act → follow up → report.</li>
+                <li>Turning a vague business goal ("get more students") into a measurable pipeline.</li>
+                <li>Building with platform rules and data-protection law in mind from day one.</li>
+            </ul>
+    </article>
+
+    <aside class="aside">
+        <div class="box">
+            <h4>See it</h4>
+            <div class="links">
+                <a href="https://borderlesstek-growth.onrender.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fas fa-arrow-up-right-from-square"></i> Open live application</a>
+                <a href="https://github.com/Adebowale-123/BorderlessTek-Growth" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fab fa-github"></i> View source on GitHub</a>
+            </div>
+        </div>
+        <div class="box">
+            <h4>Built with</h4>
+            <div class="tags" style="margin:0"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">PostgreSQL</span><span class="tag">feedparser</span><span class="tag">Telegram Bot API</span><span class="tag">SMTP</span><span class="tag">cron-job.org</span><span class="tag">Render</span><span class="tag">Neon</span></div>
+        </div>
+        <a class="next-project" href="lead-generation.html"><small>Next project →</small><b>Automated Lead Generation Platform</b></a>
+    </aside>
+</div>
+
+<footer>
+    <div class="container footer-inner">
+        <span>© <span id="year">2026</span> Your Name</span>
+        <a href="../index.html#contact">Get in touch →</a>
+    </div>
+</footer>
+
+<script src="../script.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen: Lucky-Number Prize Draw Platform · Your Name</title>
+    <meta name="description" content="A real-time digital draw platform: players pick numbers, join a pool, and a provably fair draw chooses the grand-prize winner and cash-prize winners, with a wallet, KYC, responsible-gaming controls and a back office.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css?v=1">
+</head>
+<body>
+
+<nav class="nav">
+    <div class="container nav-inner">
+        <a href="../index.html" class="logo"><span class="logo-mark">YN</span> Your Name</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#projects" class="active">Projects</a></li>
+            <li><a href="../index.html#skills">Skills &amp; Technologies</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="../index.html#contact" class="btn btn-primary btn-sm">Hire me</a>
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </div>
+</nav>
+
+<header class="case-hero">
+    <div class="container">
+        <a href="../index.html#projects" class="back"><i class="fas fa-arrow-left"></i> All projects</a>
+        <div class="project-num">06</div>
+        <h1>NextGen: Lucky-Number Prize Draw Platform</h1>
+        <div class="badges"><span class="badge">Sandbox demo, no real money</span><span class="badge">Fintech</span></div>
+        <p class="lead">A real-time digital draw platform: players pick numbers, join a pool, and a provably fair draw chooses the grand-prize winner and cash-prize winners, with a wallet, KYC, responsible-gaming controls and a back office.</p>
+        <div class="case-meta"><div><b>Type</b><span>Product build</span></div><div><b>Role</b><span>Architecture &amp; build</span></div><div><b>Stack</b><span>Django · PostgreSQL</span></div><div><b>Status</b><span>Sandbox demo</span></div></div>
+    </div>
+</header>
+
+<div class="container case-body">
+    <article>
+            <h2>The problem</h2>
+            <p>A prize-draw platform handles other people's money, so it has to prove three things: the draw is fair, every naira is accounted for, and players are protected. NextGen was designed around those three requirements first.</p>
+
+            <figure>
+                <div class="frame">
+                    <div class="frame-bar"><i></i><i></i><i></i><span class="url">nextgen-game.onrender.com</span></div>
+                    <picture><source srcset="../images/nextgen-home.webp" type="image/webp"><img src="../images/nextgen-home.jpg" alt="Homepage: today's games, prizes and the countdown to the next draw" width="1200" height="750" loading="lazy"></picture>
+                </div>
+                <figcaption>Homepage: today's games, prizes and the countdown to the next draw</figcaption>
+            </figure>
+
+            <h2>How it works</h2>
+            <ul>
+                <li><b>Play</b>: players buy coins (₦10 per coin by default) and spend 50 coins per entry; one tap gives four lucky numbers. Two games run every day.</li>
+                <li><b>Prizes</b>: a configurable share of each batch's sales funds one grand prize for the closest ticket, then ₦7,000 cash prizes for the next closest.</li>
+                <li><b>Winnings</b>: prizes go into a separate naira Winnings balance, the only balance that can be withdrawn.</li>
+                <li><b>Scheduler</b>: closes sales, draws the numbers, settles winners and opens the next draw automatically.</li>
+            </ul>
+
+            <h2>Fairness, money and safety</h2>
+            <ul>
+                <li><b>Provably fair RNG</b>: when a draw opens, the SHA-256 hash of a secret server seed is published; after the draw, the seed is revealed so anyone can check that the result wasn't changed.</li>
+                <li><b>Double-entry wallet ledger</b>: every movement is a balanced pair of entries. On PostgreSQL a database trigger makes ledger rows physically impossible to update or delete.</li>
+                <li><b>Payments</b>: deposits and payouts through Nigerian payment providers, behind a gateway interface with a sandbox implementation.</li>
+                <li><b>Compliance</b>: tiered KYC (with ID upload), responsible-gaming limits and self-exclusion, and a back office for operations with role-based access.</li>
+                <li><b>Tests</b>: 123 automated tests, plus a ledger-integrity check command.</li>
+            </ul>
+            <div class="callout"><p><b>Status:</b> the public demo runs in sandbox mode: mock payment gateway and KYC, with a &ldquo;no real money&rdquo; banner on every page. Going live would need a licence, real payment-provider keys and an always-on background worker.</p></div>
+
+            <h2>What it shows</h2>
+            <ul>
+                <li>Financial data integrity (immutable ledger, balanced entries).</li>
+                <li>Verifiable randomness and auditability.</li>
+                <li>Designing for regulation from the start: KYC, limits, audit trail.</li>
+            </ul>
+    </article>
+
+    <aside class="aside">
+        <div class="box">
+            <h4>See it</h4>
+            <div class="links">
+                <a href="https://nextgen-game.onrender.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fas fa-arrow-up-right-from-square"></i> Open live application</a>
+                <a href="https://github.com/Adebowale-123/nextGen" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fab fa-github"></i> View source on GitHub</a>
+            </div>
+        </div>
+        <div class="box">
+            <h4>Built with</h4>
+            <div class="tags" style="margin:0"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">PostgreSQL</span><span class="tag">SHA-256</span><span class="tag">Double-entry ledger</span><span class="tag">Payments</span><span class="tag">KYC</span><span class="tag">123 tests</span></div>
+        </div>
+        <a class="next-project" href="ai-employee.html"><small>Next project →</small><b>AI Employee for Marketing &amp; Onboarding</b></a>
+    </aside>
+</div>
+
+<footer>
+    <div class="container footer-inner">
+        <span>© <span id="year">2026</span> Your Name</span>
+        <a href="../index.html#contact">Get in touch →</a>
+    </div>
+</footer>
+
+<script src="../script.js?v=1"></script>
+</body>
+</html>

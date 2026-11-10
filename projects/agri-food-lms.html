@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri-Food Innovation LMS · Your Name</title>
+    <meta name="description" content="A learning and certification platform for the Agri-Food Innovation Academy (AFIA), a training and consultancy business working with food-industry professionals in Nigeria and the UK.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css?v=1">
+</head>
+<body>
+
+<nav class="nav">
+    <div class="container nav-inner">
+        <a href="../index.html" class="logo"><span class="logo-mark">YN</span> Your Name</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#projects" class="active">Projects</a></li>
+            <li><a href="../index.html#skills">Skills &amp; Technologies</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="../index.html#contact" class="btn btn-primary btn-sm">Hire me</a>
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </div>
+</nav>
+
+<header class="case-hero">
+    <div class="container">
+        <a href="../index.html#projects" class="back"><i class="fas fa-arrow-left"></i> All projects</a>
+        <div class="project-num">03</div>
+        <h1>Agri-Food Innovation LMS</h1>
+        <div class="badges"><span class="badge live">Live · real customers</span><span class="badge">Full-stack</span></div>
+        <p class="lead">A learning and certification platform for the Agri-Food Innovation Academy (AFIA), a training and consultancy business working with food-industry professionals in Nigeria and the UK.</p>
+        <div class="case-meta"><div><b>Client</b><span>Agri-Food Innovation Academy</span></div><div><b>Role</b><span>Full-stack developer</span></div><div><b>Stack</b><span>SPA + REST API</span></div><div><b>Status</b><span>Live at agrifiacademy.com</span></div></div>
+    </div>
+</header>
+
+<div class="container case-body">
+    <article>
+            <h2>The problem</h2>
+            <p>AFIA trains people in food safety, quality and manufacturing (HACCP, GMP, ISO 9001, BRCGS). Its courses were delivered in person and sold manually. It needed one place where learners in Africa and the UK can find a course, pay for it, learn online and get certified, and where the academy can manage courses, events and content itself.</p>
+
+            <figure>
+                <div class="frame">
+                    <div class="frame-bar"><i></i><i></i><i></i><span class="url">agrifiacademy.com</span></div>
+                    <picture><source srcset="../images/agrifi-home.webp" type="image/webp"><img src="../images/agrifi-home.jpg" alt="Homepage: programmes, services and the academy's mission" width="1200" height="750" loading="lazy"></picture>
+                </div>
+                <figcaption>Homepage: programmes, services and the academy's mission</figcaption>
+            </figure>
+
+            <h2>What I built</h2>
+            <ul>
+                <li><b>Course catalogue</b>: 7 faculties and 45 courses at Foundation, Intermediate and Advanced levels, with filtering by faculty and level, and search.</li>
+                <li><b>Course pages and enrolment</b>: preview pages per course, with pricing in naira and online payment through Paystack.</li>
+                <li><b>User management</b>: registration, login and a learner area; admin access to manage the catalogue.</li>
+                <li><b>Content</b>: events (with featured events served from the API), a blog, resources and service pages for the academy's consultancy work.</li>
+                <li><b>Analytics</b>: product analytics to see which programmes attract interest.</li>
+            </ul>
+
+            <figure>
+                <div class="frame">
+                    <div class="frame-bar"><i></i><i></i><i></i><span class="url">agrifiacademy.com/courses</span></div>
+                    <picture><source srcset="../images/agrifi-courses.webp" type="image/webp"><img src="../images/agrifi-courses.jpg" alt="Course catalogue with faculty filters, level filter and search" width="1200" height="750" loading="lazy"></picture>
+                </div>
+                <figcaption>Course catalogue with faculty filters, level filter and search</figcaption>
+            </figure>
+
+            <h2>Architecture</h2>
+            <ul>
+                <li><b>Front end</b>: a single-page application with client-side routing (courses, faculties, events, blog, login, register).</li>
+                <li><b>API</b>: a JSON REST API (for example <span class="mono">/api/events?featured=true</span>) that the front end calls for catalogue, event and user data.</li>
+                <li><b>Database</b>: relational models for faculties, courses, levels, enrolments, users, events and posts.</li>
+                <li><b>Deployment</b>: on a custom domain behind LiteSpeed, with HTTPS.</li>
+            </ul>
+
+            <h2>What it shows</h2>
+            <ul>
+                <li>Delivering a complete product for a real client, from data model to payments to deployment.</li>
+                <li>Modelling a structured catalogue (faculties → courses → levels) that non-technical staff can grow.</li>
+                <li>Payment integration for an African market.</li>
+            </ul>
+    </article>
+
+    <aside class="aside">
+        <div class="box">
+            <h4>See it</h4>
+            <div class="links">
+                <a href="https://agrifiacademy.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fas fa-arrow-up-right-from-square"></i> Open live application</a>
+                <a href="https://github.com/Adebowale-123/agri-food-academy" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fab fa-github"></i> View source on GitHub</a>
+            </div>
+        </div>
+        <div class="box">
+            <h4>Built with</h4>
+            <div class="tags" style="margin:0"><span class="tag">JavaScript SPA</span><span class="tag">REST API</span><span class="tag">Database design</span><span class="tag">Authentication</span><span class="tag">Paystack</span><span class="tag">PostHog</span><span class="tag">Deployment</span></div>
+        </div>
+        <a class="next-project" href="fx-compare.html"><small>Next project →</small><b>Currency Rate Comparison Platform</b></a>
+    </aside>
+</div>
+
+<footer>
+    <div class="container footer-inner">
+        <span>© <span id="year">2026</span> Your Name</span>
+        <a href="../index.html#contact">Get in touch →</a>
+    </div>
+</footer>
+
+<script src="../script.js?v=1"></script>
+</body>
+</html>
