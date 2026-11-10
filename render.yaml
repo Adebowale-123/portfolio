@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: portfolio
+    name: adebowale-solomon
     runtime: static
     buildCommand: "mkdir -p public && cp -r *.html *.css *.js projects images public/"
     staticPublishPath: public
